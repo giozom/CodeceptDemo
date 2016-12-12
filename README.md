@@ -14,10 +14,12 @@ OR
 * ~/CodeceptDemo $ <code>codeceptjs run --steps</code>
 
 ## Skipping Scenario
-* Add .skip flag to a scenario you wish to skip
+* Add **.skip** flag to a scenario you wish to skip
+* i.e. _Scenario.skip_
 
 ## Running Specific Scenario
-* Add .only flag to a scenario you wish to run
+* Add **.only** flag to a scenario you wish to run
+* i.e. _Scenario.only_
 
 ## WebDriverIO Helper
 * This Codecept Demo is using the WebDriverIO Helper as defined in the Codecept.json file
