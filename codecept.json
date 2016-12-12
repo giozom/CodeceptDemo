@@ -1,12 +1,18 @@
 {
-  "tests": "./*_test.js",
+  "tests": "test/*_test.js",
   "timeout": 10000,
   "output": "./output",
-  "helpers": {},
+  "helpers": {
+    "WebDriverIO": {
+      "url": "http://phptravels.net/",
+      "browser": "chrome",
+      "restart": true
+    }
+  },
   "include": {
-    "I": "./steps_file.js"
+    "I": "./steps/steps_file.js"
   },
   "bootstrap": false,
   "mocha": {},
-  "name": "CodeceptDemo"
+  "name": "codeceptjs"
 }

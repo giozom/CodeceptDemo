@@ -1,2 +1,1 @@
-# CodeceptDemo
-A basic demo project using codeceptjs to test angularjs app
+# An Example of using Codecept on PHP Travel Website
