@@ -19,12 +19,14 @@ OR
 
 ## Acceptance Test Configuration
 * Can have a collection of Page Objects to include when running your acceptance suite
-<code>
+* <code>
   include: {
     I: "./steps/steps.js",
     loginPage: "./pages/LoginPage.js",
+    .....something page here
+    ...
   },
-</code>
+  </code>
 
 ## Screenshots
 * Screenshots are stored in the **output** folder
