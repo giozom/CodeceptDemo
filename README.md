@@ -3,6 +3,11 @@
 * [sudo] npm install -g codeceptjs
 * [sudo] npm install -g webdriverio
 
+## Install and Start Selenium Webdriver Manager
+* npm install -g webdriver-manager
+* webdriver-manager update
+* webdriver-manager start
+
 ## Run the tests
 * ~/CodeceptDemo $ codeceptjs run --steps
 
