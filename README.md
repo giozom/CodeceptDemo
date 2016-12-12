@@ -8,28 +8,27 @@
 * webdriver-manager update
 * webdriver-manager start
 
-## Run the tests
+## Run the tests (defined in package.json)
 * ~/CodeceptDemo $ <code>npm test</code>
 OR
 * ~/CodeceptDemo $ <code>codeceptjs run --steps</code>
 
-## WebDriverIO Configuration
+## Skipping Scenario
+* Add .skip flag to a scenario you wish to skip
+
+## Running Specific Scenario
+* Add .only flag to a scenario you wish to run
+
+## WebDriverIO Helper
 * This Codecept Demo is using the WebDriverIO Helper as defined in the Codecept.json file
 * Location: <code>~/CodeceptDemo/codecept.json</code>
 
 ## Acceptance Test Configuration
 * Can have a collection of Page Objects to include when running your acceptance suite
-* <code>
-  include: {
-    I: "./steps/steps.js",
-    loginPage: "./pages/LoginPage.js",
-    .....something page here
-    ...
-  },
-  </code>
+* See **loginPage** example <code>~/CodeceptDemo/conf/webdriverio/acceptance.conf.js</code>
 
 ## Screenshots
 * Screenshots are stored in the **output** folder
 
-
-
+## More About Codeceptjs
+* Go to Codecept.io - http://codecept.io/quickstart/#setup
