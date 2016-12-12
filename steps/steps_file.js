@@ -5,8 +5,22 @@
 module.exports = function() {
   return actor({
 
-    // Define custom steps here, use 'this' to access default methods of I.
-    // It is recommended to place a general 'login' function here.
+
+      loginAs: function (name) {
+          this.amOnPage('http://phptravels.net/login');
+          this.resizeWindow('maximize');
+          this.clearCookie();
+          this.seeInTitle('Login');
+          //this.fillField('//input[@name="username"]', users[name].username);
+          this.fillField('//input[@name="username"]', 'user@phptravels.com');
+          //this.fillField('//input[@name="username"]', users[name].username);
+          this.fillField('//input[@name="password"]', 'demouser');
+          this.pressKey('Enter');
+          this.wait(2);
+          this.click("Login");
+          this.seeInCurrentUrl('/account/');
+          this.see('John');
+      },
 
   });
 }
