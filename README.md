@@ -1,7 +1,7 @@
 ## A Codecept Example Using PHP Travel Website
 #### You will need to install the following:
 * [sudo] npm install -g codeceptjs
-* [sudo] npm install -g webdriverio
+* npm install --save-dev webdriverio
 
 ## Install and Start Selenium Webdriver Manager
 * npm install -g webdriver-manager
