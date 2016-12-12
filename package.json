@@ -16,11 +16,6 @@
   "scripts": {
     "test": "cross-env SUITE=acceptance codeceptjs run --steps",
     "test:wip": "cross-env SUITE=acceptance codeceptjs run --steps --grep '@wip'",
-    "test:e2e": "cross-env SUITE=e2e codeceptjs run --steps",
-    "test:e2e:wip": "cross-env SUITE=e2e codeceptjs run --steps --grep '@wip'",
-    "test:e2e:ci": "cross-env NODE_ENV=ci SUITE=e2e codeceptjs run --reporter mocha-junit-reporter",
-    "test:ci": "cross-env NODE_ENV=ci SUITE=acceptance codeceptjs run --reporter mocha-junit-reporter",
-    "test:ci:steps": "cross-env NODE_ENV=ci SUITE=acceptance codeceptjs run --steps",
     "webdriver:update": "./node_modules/protractor/bin/webdriver-manager update"
   },
   "repository": {
