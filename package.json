@@ -2,7 +2,7 @@
   "name": "CodeceptDemo",
   "version": "0.0.0",
   "description": "Demo using PHP travel to demo codecept testing",
-  "main": "index.js",
+  "main": false,
   "directories": {
     "test": "test"
   },
