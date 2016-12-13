@@ -21,6 +21,29 @@ OR
 * Add **.only** flag to a scenario you wish to run
 * i.e. _Scenario.only_
 
+## Running Specific Feature
+* You can add a '@wip' tag to a feature you only want to run.
+* For example:
+```javascript
+'use strict';
+Feature('@wip Book Hotel Accommodation');
+
+Before((I) => {
+    I.loginAs('demouser');
+});
+
+Scenario('Hotel Booking', (I, bookingPage) => {
+    I.amOnPage('http://phptravels.net/hotels');
+    I.seeInTitle('Hotels Listings');
+    I.fillField(bookingPage.fields.location, 'Rendez');
+    I.pressKey('Enter');
+
+});
+
+```
+.. Notice the '@wip' tag in the feature
+.. To run this feature only <code>npm run test:wip</code>
+
 ## WebDriverIO Helper
 * This Codecept Demo is using the WebDriverIO Helper as defined in the Codecept.json file
 * Location: <code>~/CodeceptDemo/codecept.json</code>
