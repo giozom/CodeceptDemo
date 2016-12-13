@@ -5,14 +5,20 @@
   "helpers": {
     "WebDriverIO": {
       "url": "http://phptravels.net/",
-      "browser": "chrome",
+      "browser": "firefox",
       "restart": true
     }
   },
-  "include": {
-    "I": "./steps/steps_file.js"
+  "mocha": {
+    "reporterOptions": {
+      "mochaFile": "./output/result.xml"
+    }
   },
-  "bootstrap": false,
-  "mocha": {},
-  "name": "codeceptjs"
+  "name": "tests",
+  "include": {
+    "I": "./steps/steps_file.js",
+    "loginPage": "./pages/LoginPage.js",
+    "bookingPage": "./pages/BookingPage.js"
+  },
+  "bootstrap": false
 }
