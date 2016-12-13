@@ -15,11 +15,52 @@ OR
 
 ## Skipping Scenario
 * Add **.skip** flag to a scenario you wish to skip
-* i.e. _Scenario.skip_
+* Use _Scenario.skip_
+* For example:
+```javascript
+Scenario.skip('Hotel Booking', (I, bookingPage) => {
+    I.amOnPage('http://phptravels.net/hotels');
+    I.seeInTitle('Hotels Listings');
+    I.fillField(bookingPage.fields.location, 'Rendez');
+    I.pressKey('Enter');
+});
+```
 
 ## Running Specific Scenario
 * Add **.only** flag to a scenario you wish to run
-* i.e. _Scenario.only_
+* Use _Scenario.only_
+* For example:
+```javascript
+Scenario.only('Hotel Booking', (I, bookingPage) => {
+    I.amOnPage('http://phptravels.net/hotels');
+    I.seeInTitle('Hotels Listings');
+    I.fillField(bookingPage.fields.location, 'Rendez');
+    I.pressKey('Enter');
+});
+```
+
+## Running Specific Feature
+* You can add a '@wip' tag to a feature you only want to run.
+* For example:
+```javascript
+'use strict';
+Feature('@wip Book Hotel Accommodation');
+
+Before((I) => {
+    I.loginAs('demouser');
+});
+
+Scenario('Hotel Booking', (I, bookingPage) => {
+    I.amOnPage('http://phptravels.net/hotels');
+    I.seeInTitle('Hotels Listings');
+    I.fillField(bookingPage.fields.location, 'Rendez');
+    I.pressKey('Enter');
+
+});
+
+```
+* Notice the **'@wip'** tag in the feature above
+* To run this feature only from command line: <code>npm run test:wip</code>
 
 ## WebDriverIO Helper
 * This Codecept Demo is using the WebDriverIO Helper as defined in the Codecept.json file
