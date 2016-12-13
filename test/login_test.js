@@ -4,10 +4,11 @@ let yaml = require('js-yaml');
 let fs   = require('fs');
 var users = yaml.safeLoad(fs.readFileSync('./conf/webdriverio/users.yaml', 'utf8'));
 
-Feature('Login to PHP');
+Feature('Login and Logout of PHP Travel Site');
 
-Scenario.only('Go to PHP travel site', (I) => {
+Scenario('Login and Logout', (I) => {
     I.loginAs('demouser');
+    I.logOut();
 
 });
 
