@@ -1,19 +1,19 @@
 
 Feature('Verify Header Menus on PHP Travel Homepage');
 
-Scenario('Go to PHP travel site', (I) => {
+Scenario('Go to PHP travel site and verify navigation menus', (I) => {
     I.amOnPage('http://phptravels.net/');
+    I.resizeWindow('maximize');
+    I.see('Hotels');
+    I.see('Flights');
+    I.see('Tours');
+    I.see('Cars');
+    I.see('Offers');
+    I.see('Blog');
     I.see('Featured Hotels');
-});
-
-Scenario('Verify Header', (I) => {
-    I.amOnPage('http://phptravels.net/flightsw');
-    I.seeInTitle('Flights');
     I.amOnPage('http://phptravels.net/tours');
     I.seeInTitle('Tours Listings');
-    I.click({css: '//a[contains(.,"Cars")]'});
-    I.seeInTitle('Cars Listings');
-    I.amOnPage('http://phptravels.net/offers');
-    I.seeInTitle('Special Offers');
+    I.amOnPage('http://phptravels.net/hotels');
+    I.seeInTitle('Hotels Listing');
 
 });
