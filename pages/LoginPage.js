@@ -5,7 +5,8 @@ let I;
 module.exports = {
 
     _init() {
-        I = require('./steps/steps.js')();
+        //I = require('./steps/steps_file.js')();
+        I = actor();
     },
 
 
@@ -19,7 +20,7 @@ module.exports = {
     },
 
     button: {
-      loginButton: '//button[contains(.,'Login')]'
+      loginButton: '//button[contains(.,"Login")]'
     },
 
     links: {
