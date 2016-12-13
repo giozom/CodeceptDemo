@@ -15,11 +15,29 @@ OR
 
 ## Skipping Scenario
 * Add **.skip** flag to a scenario you wish to skip
-* i.e. _Scenario.skip_
+* Use _Scenario.skip_
+* For example:
+```javascript
+Scenario.skip('Hotel Booking', (I, bookingPage) => {
+    I.amOnPage('http://phptravels.net/hotels');
+    I.seeInTitle('Hotels Listings');
+    I.fillField(bookingPage.fields.location, 'Rendez');
+    I.pressKey('Enter');
+});
+```
 
 ## Running Specific Scenario
 * Add **.only** flag to a scenario you wish to run
-* i.e. _Scenario.only_
+* Use _Scenario.only_
+* For example:
+```javascript
+Scenario.only('Hotel Booking', (I, bookingPage) => {
+    I.amOnPage('http://phptravels.net/hotels');
+    I.seeInTitle('Hotels Listings');
+    I.fillField(bookingPage.fields.location, 'Rendez');
+    I.pressKey('Enter');
+});
+```
 
 ## Running Specific Feature
 * You can add a '@wip' tag to a feature you only want to run.
