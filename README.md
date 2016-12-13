@@ -41,8 +41,8 @@ Scenario('Hotel Booking', (I, bookingPage) => {
 });
 
 ```
-.. Notice the '@wip' tag in the feature
-.. To run this feature only <code>npm run test:wip</code>
+* Notice the **'@wip'** tag in the feature above
+* To run this feature only from command line: <code>npm run test:wip</code>
 
 ## WebDriverIO Helper
 * This Codecept Demo is using the WebDriverIO Helper as defined in the Codecept.json file
