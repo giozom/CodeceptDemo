@@ -7,10 +7,7 @@
     "directories": null
   },
   "before_script": [
-    "npm install -g codeceptjs",
-    "npm install -g webdriverio",
-    "npm install -g webdriver-manager",
-    "webdriver-manager start &"
+    "webdriver-manager start"
   ],
   "script": [
     "npm test"
